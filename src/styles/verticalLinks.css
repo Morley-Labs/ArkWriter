@@ -1,0 +1,23 @@
+.vertical-link-path {
+  transition: stroke 0.2s;
+}
+
+.vertical-link:hover .vertical-link-path {
+  stroke: #FF7F11;
+}
+
+.vertical-link-node {
+  transition: fill 0.2s;
+}
+
+.vertical-link:hover .vertical-link-node {
+  fill: #FF7F11;
+}
+
+.vertical-link-hitbox {
+  opacity: 0;
+}
+
+.vertical-link-hitbox:hover + .vertical-link-path {
+  stroke: #FF7F11;
+}
