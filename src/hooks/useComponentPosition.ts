@@ -34,7 +34,8 @@ export function useComponentPosition({
     if (!isDragging) return;
 
     const deltaX = e.clientX - startX;
-    const deltaGridUnits = Math.round(deltaX / gridSize);
+    const snappedDelta = snapToGrid(deltaX, gridSize);
+    const deltaGridUnits = snappedDelta / gridSize;
     const newPosition = startPosition + deltaGridUnits;
 
     // Only update if the new position is valid
