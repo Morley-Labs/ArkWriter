@@ -84,3 +84,30 @@ function areSegmentTypesCompatible(
 
   return true;
 }
+
+// Validate a component position on a rung. The optional excludePosition allows
+// ignoring a component already located at that grid index when performing the
+// overlap check.
+export function validatePosition(
+  position: number,
+  components: Component[],
+  excludePosition?: number
+): boolean {
+  const gridPos = Math.round(position);
+  if (gridPos < 1) return false;
+
+  return !components.some(comp => {
+    if (excludePosition !== undefined && Math.round(comp.position) === Math.round(excludePosition)) {
+      return false;
+    }
+
+    const start = Math.round(comp.position);
+    const end = start + (comp.width || 1) - 1;
+    return gridPos >= start && gridPos <= end;
+  });
+}
+
+// Snap a pixel based coordinate to the nearest grid multiple.
+export function snapToGrid(x: number, gridSize: number): number {
+  return Math.round(x / gridSize) * gridSize;
+}
