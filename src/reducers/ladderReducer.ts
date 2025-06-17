@@ -133,7 +133,7 @@ export function ladderReducer(state: ProjectData = initialState, action: LadderA
       
       return {
         ...state,
-        rungs: state.rungs.filter((_, index) => index !== action.rungIndex)
+}
       };
     }
 
