@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDrag } from 'react-dnd';
 import { Edit2, Trash2 } from 'lucide-react';
-import { Component } from '../types/plc';
+import { Component } from '../types/project';
 import { GRID_SIZE, RAIL_WIDTH } from '../utils/gridSystem';
 
 interface LadderComponentProps {

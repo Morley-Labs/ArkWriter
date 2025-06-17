@@ -1,4 +1,4 @@
-import { ProjectData, Component } from '../types/plc';
+import { ProjectData, Component } from '../types/project';
 
 export type LadderAction = 
   | { type: 'ADD_COMPONENT'; rungIndex: number; component: Component }
