@@ -78,10 +78,9 @@ export function ladderReducer(state: ProjectData = initialState, action: LadderA
       // Ensure integer position
       const targetPosition = Math.round(action.toPosition);
       
-      // Get or create target rung
-      const targetRung = action.fromRung === action.toRung 
-        ? sourceRung 
-        : { ...newRungs[action.toRung] };
+      }
+
+        rungs: state.rungs.filter((_, i) => i !== action.rungIndex)
 
       // Validate position in target rung
       if (!isPositionValid(targetPosition, targetRung.components)) {

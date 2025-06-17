@@ -40,6 +40,12 @@ Lint the codebase with:
 npm run lint
 ```
 
+Run the test suite with:
+
+```bash
+npm test
+```
+
 ## Project structure
 
 - `src/` – React components, hooks and services
