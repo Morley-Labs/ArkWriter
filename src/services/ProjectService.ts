@@ -1,4 +1,4 @@
-import { ProjectData, POU } from '../types/plc';
+import { ProjectData, POU } from '../types/project';
 import { fileService } from './FileService';
 import { toastService } from './ToastService';
 

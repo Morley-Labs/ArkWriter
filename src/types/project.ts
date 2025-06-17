@@ -1,1 +1,1 @@
-export * from './plc';
+export type { Component, ProjectData, POU, Rung, GridSegment, VerticalLink } from './plc';
