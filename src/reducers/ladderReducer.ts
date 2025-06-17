@@ -104,8 +104,9 @@ export function ladderReducer(state: ProjectData = initialState, action: LadderA
       newRungs[action.fromRung] = sourceRung;
       if (action.fromRung !== action.toRung) {
         newRungs[action.toRung] = targetRung;
-      }
+      const updatedRungs = state.rungs.filter((_, i) => i !== action.rungIndex);
 
+        rungs: updatedRungs
       return { ...state, rungs: newRungs };
     }
 
